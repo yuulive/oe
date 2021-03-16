@@ -1,7 +1,7 @@
 use error_test::{ParseThenCombineError, parse_then_combine};
 
 #[macro_use]
-extern crate polyerror;
+extern crate oe;
 
 mod error_test { //you don't need to have a separate module like this, but it is added to the test to test that the `pub` specification works
     use std::str::ParseBoolError;

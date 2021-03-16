@@ -14,7 +14,7 @@
 //! In this example, the set of possible failure modes is clearly documented in the function's signature. Furthermore, it is
 //! standard for Javadoc comments to describe under which scenarios each exception is thrown. You can read more about my concerns with Rust's error handling system compared to Java's [here](https://www.reddit.com/r/rust/comments/jdvtu4/javas_error_handling_system_is_better_than_that/).
 //! 
-//! Polyerror solves this problem by making it so trivial (literally a one-line macro call) to define an ergonomic (? works) and correct error type that it is practical to have a separate error type for each function. This way, it is always obvious to the end user in which way a function can error. See the examples section for more details and to learn how to use this crate. Another advantage of this crate is that it's very simple to use — once you read this document, you know all that there is to know about the crate, as opposed to other error libraries for Rust. Just one macro is exported that provides all that you need for robust, easily understandable (for you and your users), and correct error handling in Rust. 
+//! OE solves this problem by making it so trivial (literally a one-line macro call) to define an ergonomic (? works) and correct error type that it is practical to have a separate error type for each function. This way, it is always obvious to the end user in which way a function can error. See the examples section for more details and to learn how to use this crate. Another advantage of this crate is that it's very simple to use — once you read this document, you know all that there is to know about the crate, as opposed to other error libraries for Rust. Just one macro is exported that provides all that you need for robust, easily understandable (for you and your users), and correct error handling in Rust. 
 //! 
 //! 
 //! Examples
@@ -27,7 +27,7 @@
 //! use std::str::ParseBoolError;
 //! use std::num::ParseIntError;
 //!
-//! # #[macro_use] extern crate polyerror;
+//! # #[macro_use] extern crate oe;
 //! # fn main(){}
 //! 
 //! create_error!(pub ParseThenCombineError: ParseBoolError, ParseIntError);
